@@ -1,12 +1,12 @@
-import { Container, CssBaseline, Typography } from '@mui/material'
+import { Container, CssBaseline } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
+import Header from './components/header'
+import NumberCounterButtons from './components/number-counter-button'
 
 function App() {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = createTheme({
     palette: {
-      mode: prefersDarkMode ? 'dark' : 'light',
+      mode: 'light',
     },
     breakpoints: {
       values: {
@@ -24,12 +24,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="md">
-        <Typography variant="h3" gutterBottom>
-          Responsive MUI + React Site
-        </Typography>
-        <Typography>
-          This layout adjusts based on screen size and system theme.
-        </Typography>
+       <Header />
+       <NumberCounterButtons />
       </Container>
     </ThemeProvider>
   )
