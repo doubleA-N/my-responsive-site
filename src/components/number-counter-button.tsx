@@ -36,7 +36,7 @@ const NumberCounterButtons = () => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center" pt={1}>
       {topThree.length > 0 && (
-        <Box mt={1}>
+        <Box my={1}>
           <Typography variant="h6">เลขมาแรง 💨🧨</Typography>
           <Typography color='text.secondary'>ทำไว้แค่ 3 อันดับ เพราะรีบ ขอโทษจ่ะ 😭</Typography>
 
