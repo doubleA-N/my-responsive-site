@@ -36,14 +36,14 @@ const NumberCounterButtons = () => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center" pt={1}>
       {topThree.length > 0 && (
-        <Box my={1}>
+        <Box width="100%" my={1}>
           <Typography variant="h6">เลขมาแรง 💨🧨</Typography>
           <Typography color='text.secondary'>ทำไว้แค่ 3 อันดับ เพราะรีบ ขอโทษจ่ะ 😭</Typography>
 
           <Stack spacing={1} mt={1}>
-            {topThree.map(([num, count]) => (
+            {topThree.map(([num, count], idx) => (
               <Typography variant="h6" key={num}>
-                หมายเลข {num} ได้คะแนน {count} โหวต {Number(num) === 2 ? '🥳' : '🙂‍↔️'}
+                {Number(idx) === 0 ? '🥇' : '🔻'} หมายเลข {num} ได้ {count} โหวต {Number(num) === 2 ? '🥳' : '🙂‍↔️'}
               </Typography>
             ))}
           </Stack>
@@ -83,7 +83,7 @@ const NumberCounterButtons = () => {
         ))}
       </Box>
 
-      <Box mt={4}>
+      <Box my={4}>
         <Button
           fullWidth
           variant="outlined"
